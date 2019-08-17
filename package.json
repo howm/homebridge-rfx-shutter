@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "repository": "git@github.com:howm/homebridge-blind.git",
   "author": "howm",
-  "description": "Homebrdige plugin for blinds controlled by RFXtrx433(E) transceivers.",
+  "description": "Homebridge plugin for blinds controlled by RFXtrx433(E) transceivers.",
   "license": "MIT",
   "private": false,
   "scripts": {
