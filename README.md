@@ -1,21 +1,23 @@
-# @boilerz/boilerplate-lib
+# @howm/homebridge-blind
 
-[![GitHub forks](https://img.shields.io/github/forks/boilerz/boilerplate-lib?label=Fork%20me)](https://github.com/boilerz/boilerplate-lib/fork) [![Greenkeeper badge](https://badges.greenkeeper.io/boilerz/boilerplate-lib.svg)](https://greenkeeper.io/)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/howm/homebridge-blind)](https://www.npmjs.com/package/@howm/homebridge-blind)
 
-> Boilerplate lib.
+> Homebridge plugin for blinds controlled by RFXtrx433(E) transceivers.
 
-### Setup
+### Install
 
-1. Fork the project or manually run:
 ```bash
-git clone git@github.com:boilerz/boilerplate-lib.git my-lib
-cd my-lib
-git remote set-url origin git@github.com:gh_user/my-lib
+yarn add @howm/homebridge-blind
 ```
 
-Then after pull run:
+### Usage
+
+// ...
+
+### Release
 
 ```bash
-yarn install
-yarn custom
+yarn version
+yarn build
+yarn publish dist --access public
 ```

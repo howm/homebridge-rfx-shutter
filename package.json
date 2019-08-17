@@ -1,15 +1,14 @@
 {
-  "name": "@gh_user/gh_repo_name",
-  "version": "package_version",
+  "name": "@howm/homebridge-blind",
+  "version": "0.1.0",
   "main": "src/index.ts",
-  "repository": "git@github.com:gh_user/gh_repo_name.git",
-  "author": "gh_user",
-  "description": "gh_short_description",
+  "repository": "git@github.com:howm/homebridge-blind.git",
+  "author": "howm",
+  "description": "Homebrdige plugin for blinds controlled by RFXtrx433(E) transceivers.",
   "license": "MIT",
   "private": false,
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "custom": "customBoilerplate",
     "build": "buildTSPackage",
     "test": "jest --coverage"
   },
