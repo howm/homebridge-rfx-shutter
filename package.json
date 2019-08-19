@@ -1,12 +1,19 @@
 {
-  "name": "@howm/homebridge-blind",
+  "name": "homebridge-rfx-shutter",
   "version": "0.1.0",
   "main": "src/index.ts",
-  "repository": "git@github.com:howm/homebridge-blind.git",
-  "author": "howm",
+  "repository": "git@github.com:howm/homebridge-rfx-shutter.git",
+  "author": "momsse",
   "description": "Homebridge plugin for blinds controlled by RFXtrx433(E) transceivers.",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "node": ">=8.0.0",
+    "homebridge": ">=0.4.0"
+  },
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "buildTSPackage",
@@ -34,5 +41,9 @@
       "dependencyPin": ":pushpin: pin ${dependency} to ${oldVersion}",
       "devDependencyPin": ":pushpin: pin ${dependency} to ${oldVersion}"
     }
+  },
+  "dependencies": {
+    "rfxcom": "^2.0.2",
+    "waait": "^1.0.5"
   }
 }
