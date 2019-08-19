@@ -117,7 +117,7 @@ export function getClass(Service: any, Characteristic: any): WindowCoverClass {
       );
       await wait(
         (Math.abs(this.targetPosition - this.currentPosition) / 100) *
-          (this.config.openSeconds * 1000),
+          ((up ? this.config.openSeconds : this.config.closeSeconds) * 1000),
       );
 
       if (this.targetPosition !== 100 && this.targetPosition !== 0) {
