@@ -1,6 +1,6 @@
 # homebridge-rfx-shutter
 
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/homebridge-rfx-shutter)](https://www.npmjs.com/package/@homebridge-rfx-shutter)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/howm/homebridge-rfx-shutter)](https://www.npmjs.com/package/homebridge-rfx-shutter)
 
 > Homebridge plugin for shutters controlled by RFXtrx433(E) transceivers.
 
