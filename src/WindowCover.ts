@@ -99,11 +99,15 @@ export function getClass(Service: any, Characteristic: any): WindowCoverClass {
       cb: Callback<null>,
     ): Promise<void> {
       this.log(`setTargetPosition ${value} for ${this.config.deviceId}`);
+      /**
+       * It seems that the cb need to be called to say that we understand the action. When delayed
+       * until the position stop Siri complain about communication problem with the device.
+       */
+      cb(null, null);
+
       this.targetPosition = value;
 
-      if (this.targetPosition === this.currentPosition) {
-        return cb(null, null);
-      }
+      if (this.targetPosition === this.currentPosition) return;
 
       const up: boolean = this.targetPosition > this.currentPosition;
       this.setPositionState(
@@ -125,19 +129,14 @@ export function getClass(Service: any, Characteristic: any): WindowCoverClass {
         this.log(`fireShutterAction ${BlindAction.STOP}`);
         fireShutterAction(this.config.deviceId, BlindAction.STOP);
       }
-
+      this.setPositionState(PositionState.STOPPED);
       this.setCurrentPosition(this.targetPosition);
-      return cb(null, null);
     }
 
     private setCurrentPosition(value: number): void {
       this.log(`setCurrentPosition to ${value} for ${this.config.deviceId}`);
       this.currentPosition = value;
       this.service.setCharacteristic(Characteristic.CurrentPosition, value);
-      this.service.setCharacteristic(
-        Characteristic.PositionState,
-        Characteristic.PositionState.STOPPED,
-      );
     }
 
     private getPositionState(cb: Callback<PositionState>): void {
