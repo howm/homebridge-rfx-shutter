@@ -16,7 +16,7 @@
   },
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "build": "buildTSPackage",
+    "build": "buildTSPackage && cp -rf images dist && cp V1_README.md dist",
     "test": "jest --coverage"
   },
   "devDependencies": {
