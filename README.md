@@ -32,8 +32,12 @@ In your `~/.homebridge/config.json` on the `platform` part add your shutter usin
 
 - `tty` is the device "teletype" that can be found using `find-rfxcom` [rfxcom utility script](https://github.com/rfxcom/node-rfxcom#utility-scripts).
 - `openSeconds` / `closeSeconds` are optionals, by default they are set to `25` for opening and `22` seconds for closing.
-- `excludedDeviceIds` option can be used to remove any shutter or "shutter group" to the platform. The device id of the shutter is provided in the accessory information, see below:
+- `excludedDeviceIds` option can be used to remove any shutter or "shutter group" to the platform. The device id of the shutter is provided in the accessory information (`Serial number`), see below:
+
 ![Accessory Information](images/accessory-information.png)
+
+If successful this plugin should dynamically find your shutters like below:
+
 ![Accessory Information](images/accessory-detected.png)
 
 ### Release

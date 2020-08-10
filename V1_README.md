@@ -1,4 +1,4 @@
-# [V1.x.x] homebridge-rfx-shutter
+# [v1.x.x] homebridge-rfx-shutter
 
 **Warning**: `v1.x.x` version of this plugin have issues with latest `rfxcom` versions. The multiple accessories model fire multiple `listRemotes` (one for each accessory defined on your config file) that overwhelm the transceivers. `v2.x.x` use platform model that prevent this issue.
 
