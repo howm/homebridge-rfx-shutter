@@ -62,8 +62,12 @@ export default class RFXShutterDynamicPlatform
         );
 
         remotes.forEach((remote: Remote): void => {
+          const isExcludedDevice = this.config.excludedDeviceIds?.includes(
+            remote.deviceId,
+          );
+
           if (this.accessoryByDeviceId.has(remote.deviceId)) {
-            if (this.config.excludedDeviceIds?.includes(remote.deviceId)) {
+            if (isExcludedDevice) {
               const {
                 accessory,
               }: ShutterAccessory = this.accessoryByDeviceId.get(
@@ -77,6 +81,8 @@ export default class RFXShutterDynamicPlatform
             }
             return;
           }
+
+          if (isExcludedDevice) return;
 
           const displayName = `Shutter ${remote.deviceId}`;
           const accessory = new Accessory(
