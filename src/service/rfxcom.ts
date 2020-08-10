@@ -1,5 +1,6 @@
 // @ts-ignore
 import rfxcom, { RfxCom, Rfy } from 'rfxcom';
+import { Logging } from 'homebridge';
 
 export interface SetupOptions {
   debug?: boolean;
@@ -14,7 +15,7 @@ export interface Remote {
   rollingCode: number;
 }
 
-export enum BlindAction {
+export enum ShutterAction {
   UP = 'up',
   DOWN = 'down',
   STOP = 'stop',
@@ -32,20 +33,23 @@ export function setup(
   return rfxtrx;
 }
 
-export function listRemotes(): Promise<Remote[]> {
+export function listRemotes(log: Logging): Promise<Remote[]> {
   if (!rfxtrx) throw new Error('Missing setup');
 
   return new Promise((resolve: Function): void => {
     rfxtrx.once('rfyremoteslist', resolve);
 
     rfxtrx.initialise((): void => {
-      console.info('Device initialised, listing remotes');
+      log.info('[listRemotes] Device initialised, listing remotes');
       rfy.listRemotes();
     });
   });
 }
 
-export function fireShutterAction(deviceId: string, action: BlindAction): void {
+export function fireShutterAction(
+  deviceId: string,
+  action: ShutterAction,
+): void {
   if (!rfy) throw new Error('Missing setup');
 
   rfy[action](deviceId);

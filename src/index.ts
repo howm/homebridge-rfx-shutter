@@ -1,9 +1,11 @@
-import * as WindowCover from './WindowCover';
+import { API } from 'homebridge';
+import RFXShutterDynamicPlatform, {
+  PLATFORM_NAME,
+} from './platform/RFXShutterDynamicPlatform';
 
-export default function HomeBridgeBlindPlugin(homeBridge: any): void {
-  homeBridge.registerAccessory(
-    'homebridge-rfx-shutter',
-    'HomebridgeRfxShutter',
-    WindowCover.getClass(homeBridge.hap.Service, homeBridge.hap.Characteristic),
-  );
-}
+/*
+ * Initializer function called when the plugin is loaded.
+ */
+export = (api: API): void => {
+  api.registerPlatform(PLATFORM_NAME, RFXShutterDynamicPlatform);
+};
