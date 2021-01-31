@@ -9,6 +9,7 @@ import {
   PlatformAccessoryEvent,
 } from 'homebridge';
 import wait from 'waait';
+
 import { ShutterAction, fireShutterAction } from '../service/rfxcom';
 
 const DEFAULT_OPEN_SECONDS = 25;
@@ -31,9 +32,9 @@ export default class ShutterAccessory {
 
   public readonly accessory: PlatformAccessory;
 
-  private currentPosition: number = 0;
+  private currentPosition = 0;
 
-  private targetPosition: number = 0;
+  private targetPosition = 0;
 
   private readonly deviceId: string;
 

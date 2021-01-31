@@ -1,6 +1,6 @@
+import { Logging } from 'homebridge';
 // @ts-ignore
 import rfxcom, { RfxCom, Rfy } from 'rfxcom';
-import { Logging } from 'homebridge';
 
 export interface SetupOptions {
   debug?: boolean;
