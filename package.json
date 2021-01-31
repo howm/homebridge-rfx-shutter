@@ -1,6 +1,6 @@
 {
   "name": "homebridge-rfx-shutter",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "src/index.ts",
   "homepage": "https://github.com/howm/homebridge-rfx-shutter",
   "repository": "git@github.com:howm/homebridge-rfx-shutter.git",
