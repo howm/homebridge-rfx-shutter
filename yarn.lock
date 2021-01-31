@@ -152,9 +152,9 @@
   integrity sha512-wjEc53n0EycRkqLP+J+GeF/3eTyPq+gzkyhNoGUQ9L3Vvlq9xR0mhe9F/shWFBU2ImEisBfX83av4TVdXp+QYQ==
 
 "@boilerz/eslint-config@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.3.tgz#9ea6784ce38088fea9cb241904e84d105750bc12"
-  integrity sha512-X71xBYeo6kPgz6yOdZn7yINmJMWD57TqtTRzVhhFLWV2QsB9c7aItK7siSDeML8GGm9WFEVGAw/eYvLR1NvMww==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.4.tgz#7edd7258f0cbf435ea362c747f7ae4957af95188"
+  integrity sha512-+WMGlHTkeRpHlfJeJwxMgaYJHw0lZepwAZ7nJ+8X+LYXRvvcwF0MkUS0250Iu9ng6ipw+3UbUXct148t4z1F0g==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.34.0"
     "@typescript-eslint/parser" "^2.34.0"
