@@ -8,10 +8,10 @@ import {
   PlatformConfig,
 } from 'homebridge';
 
-import { listRemotes, Remote, setup } from '../service/rfxcom';
 import ShutterAccessory, {
   ShutterAccessoryConfig,
 } from '../accessory/ShutterAccessory';
+import { listRemotes, Remote, setup } from '../service/rfxcom';
 
 const DEFAULT_TTY = '/dev/ttyUSB0';
 

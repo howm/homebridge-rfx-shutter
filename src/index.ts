@@ -1,4 +1,5 @@
 import { API } from 'homebridge';
+
 import RFXShutterDynamicPlatform, {
   PLATFORM_NAME,
 } from './platform/RFXShutterDynamicPlatform';
