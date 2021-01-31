@@ -1,5 +1,5 @@
-// @ts-ignore
 import { Logging } from 'homebridge';
+// @ts-ignore
 import rfxcom, { RfxCom, Rfy } from 'rfxcom';
 
 export interface SetupOptions {
