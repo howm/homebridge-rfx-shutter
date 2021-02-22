@@ -7,6 +7,7 @@ import {
   Logging,
   PlatformAccessory,
   PlatformAccessoryEvent,
+  CharacteristicValue,
 } from 'homebridge';
 import wait from 'waait';
 
@@ -93,18 +94,18 @@ export default class ShutterAccessory {
       .on(CharacteristicEventTypes.GET, this.getPositionState.bind(this));
   }
 
-  public getCurrentPosition(cb: CharacteristicGetCallback<number>): void {
+  public getCurrentPosition(cb: CharacteristicGetCallback): void {
     this.log(`getCurrentPosition ${this.currentPosition} for ${this.deviceId}`);
     cb(null, this.currentPosition);
   }
 
-  public getTargetPosition(cb: CharacteristicGetCallback<number>): void {
+  public getTargetPosition(cb: CharacteristicGetCallback): void {
     this.log(`getTargetPosition ${this.targetPosition} for ${this.deviceId}`);
     cb(null, this.targetPosition);
   }
 
   public async setTargetPosition(
-    value: number,
+    value: CharacteristicValue,
     cb: CharacteristicSetCallback,
   ): Promise<void> {
     this.log(`setTargetPosition ${value} for ${this.deviceId}`);
@@ -114,7 +115,7 @@ export default class ShutterAccessory {
      */
     cb(null, value);
 
-    this.targetPosition = value;
+    this.targetPosition = value as number;
 
     if (this.targetPosition === this.currentPosition) return;
 
@@ -152,7 +153,7 @@ export default class ShutterAccessory {
       .setCharacteristic(this.hap.Characteristic.CurrentPosition, value);
   }
 
-  public getPositionState(cb: CharacteristicGetCallback<PositionState>): void {
+  public getPositionState(cb: CharacteristicGetCallback): void {
     this.log(`getPositionState ${this.positionState} for ${this.deviceId}`);
     cb(null, this.positionState);
   }
