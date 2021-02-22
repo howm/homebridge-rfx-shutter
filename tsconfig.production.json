@@ -1,0 +1,6 @@
+{
+  "extends": "@boilerz/tsconfig-production",
+  "compilerOptions": {
+    "importHelpers": false
+  }
+}

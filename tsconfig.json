@@ -1,9 +1,3 @@
 {
-  "extends": "@boilerz/tsconfig",
-  "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist",
-    "declaration": true,
-    "importHelpers": false
-  }
+  "extends": "@boilerz/tsconfig"
 }
