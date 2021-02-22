@@ -22,13 +22,13 @@
   },
   "devDependencies": {
     "@boilerz/build-tools": "^1.5.2",
-    "@boilerz/eslint-config": "^2.0.7",
+    "@boilerz/eslint-config": "^2.0.14",
     "@boilerz/prettier-config": "^1.0.0",
     "@boilerz/tsconfig": "^1.4.6",
     "@boilerz/tsconfig-production": "^1.4.6",
     "@types/jest": "^26.0.16",
-    "homebridge": "^1.3.0",
     "eslint": "^7.20.0",
+    "homebridge": "^1.3.0",
     "prettier": "^2.0.5",
     "typescript": "^4"
   },
