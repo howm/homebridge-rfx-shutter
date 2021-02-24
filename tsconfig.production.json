@@ -1,6 +1,8 @@
 {
   "extends": "@boilerz/tsconfig-production",
   "compilerOptions": {
-    "importHelpers": false
+    "importHelpers": false,
+    "lib": ["es2018"],
+    "target": "es2018"
   }
 }
