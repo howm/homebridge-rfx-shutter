@@ -46,10 +46,10 @@
     "@boilerz/build-tools" "^1.5.1"
     lodash.omit "^4.5.0"
 
-"@boilerz/eslint-config@^2.0.16":
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.16.tgz#73d57729dc020b4913db317b66b7fc54ecffdfc7"
-  integrity sha512-TE9JEOngWosIOKAVfEHy+6re/tafdu19+an+gtmj99GOjztjktcTsAs/56lJQgmUaz7FxAzEtqHrs38SS+E2fQ==
+"@boilerz/eslint-config@^2.0.17":
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.17.tgz#82c3c0c2c62d92f0e8c4624a94cfa311c20b9cbf"
+  integrity sha512-wlYcnKfqJL44zMHRXnGMhY8Sx9rQjILRAoPVQdAk/Mp4E+WsSK2VyZ6E2NxJo3XWTC1THHk75jTBfespO7fcAA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.15.2"
     "@typescript-eslint/parser" "^4.15.2"
