@@ -24,7 +24,7 @@
     "@boilerz/build-tools": "^1.5.2",
     "@boilerz/eslint-config": "^2.0.17",
     "@boilerz/prettier-config": "^1.0.0",
-    "@boilerz/tsconfig": "^1.4.6",
+    "@boilerz/tsconfig": "^1.4.7",
     "@boilerz/tsconfig-production": "^1.4.6",
     "@types/jest": "^26.0.16",
     "eslint": "^7.21.0",
