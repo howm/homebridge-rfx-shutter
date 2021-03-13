@@ -17,6 +17,7 @@
   },
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "typecheck": "tsc",
     "build": "buildTSPackage && cp -rf images dist && cp V1_README.md dist",
     "test": "jest --coverage"
   },
