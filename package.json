@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@boilerz/build-tools": "^1.5.5",
-    "@boilerz/eslint-config": "^2.0.19",
+    "@boilerz/eslint-config": "^2.0.20",
     "@boilerz/prettier-config": "^1.0.0",
     "@boilerz/tsconfig": "^1.4.7",
     "@boilerz/tsconfig-production": "^1.4.7",
