@@ -34,6 +34,7 @@ In your `~/.homebridge/config.json` on the `platform` part add your shutter usin
 - `tty` is the device "teletype" that can be found using `find-rfxcom` [rfxcom utility script](https://github.com/rfxcom/node-rfxcom#utility-scripts).
 - `openSeconds` / `closeSeconds` are optionals, by default they are set to `25` for opening and `22` seconds for closing.
 - `excludedDeviceIds` option can be used to remove any shutter or "shutter group" to the platform. The device id of the shutter is provided in the accessory information (`Serial number`), see below:
+- `direction` option is here to support blinds that use the opposite direction. It has to be set to `reverse` when needed (default to `normal`).
 
 ![Accessory Information](images/accessory-information.png)
 

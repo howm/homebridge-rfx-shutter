@@ -21,9 +21,12 @@ enum PositionState {
   STOPPED = 2,
 }
 
+type Required<T> = { [K in keyof T]-?: T[K] };
+
 export interface ShutterAccessoryConfig {
   openSeconds?: number;
   closeSeconds?: number;
+  direction?: 'normal' | 'reverse';
 }
 
 export default class ShutterAccessory {
@@ -41,7 +44,7 @@ export default class ShutterAccessory {
 
   private positionState: number = PositionState.STOPPED;
 
-  private readonly config: ShutterAccessoryConfig;
+  private readonly config: Required<ShutterAccessoryConfig>;
 
   public constructor(
     log: Logging,
@@ -53,7 +56,12 @@ export default class ShutterAccessory {
     this.hap = api.hap;
     this.accessory = accessory;
     this.deviceId = accessory.context.deviceId;
-    this.config = config;
+    this.config = {
+      openSeconds: DEFAULT_OPEN_SECONDS,
+      closeSeconds: DEFAULT_CLOSE_SECONDS,
+      direction: 'normal',
+      ...config,
+    };
 
     accessory.on(PlatformAccessoryEvent.IDENTIFY, (): void => {
       this.log(accessory.displayName, ' identified!');
@@ -104,6 +112,13 @@ export default class ShutterAccessory {
     cb(null, this.targetPosition);
   }
 
+  public getShutterAction(up: boolean): ShutterAction {
+    if (this.config.direction === 'reverse') {
+      return up ? ShutterAction.DOWN : ShutterAction.UP;
+    }
+    return up ? ShutterAction.UP : ShutterAction.DOWN;
+  }
+
   public async setTargetPosition(
     value: CharacteristicValue,
     cb: CharacteristicSetCallback,
@@ -123,17 +138,11 @@ export default class ShutterAccessory {
     this.setPositionState(
       up ? PositionState.INCREASING : PositionState.DECREASING,
     );
-    fireShutterAction(
-      this.deviceId,
-      up ? ShutterAction.UP : ShutterAction.DOWN,
-    );
+    fireShutterAction(this.deviceId, this.getShutterAction(up));
 
     await wait(
       (Math.abs(this.targetPosition - this.currentPosition) / 100) *
-        ((up
-          ? this.config.openSeconds || DEFAULT_OPEN_SECONDS
-          : this.config.closeSeconds || DEFAULT_CLOSE_SECONDS) *
-          1000),
+        ((up ? this.config.openSeconds : this.config.closeSeconds) * 1000),
     );
 
     if (this.targetPosition !== 100 && this.targetPosition !== 0) {
