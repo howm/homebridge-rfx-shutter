@@ -57,8 +57,8 @@ export default class ShutterAccessory {
     this.accessory = accessory;
     this.deviceId = accessory.context.deviceId;
     this.config = {
-      openSeconds: DEFAULT_OPEN_SECONDS,
-      closeSeconds: DEFAULT_CLOSE_SECONDS,
+      openSeconds: config.openSeconds || DEFAULT_OPEN_SECONDS,
+      closeSeconds: config.closeSeconds || DEFAULT_CLOSE_SECONDS,
       direction: 'normal',
       ...config,
     };
