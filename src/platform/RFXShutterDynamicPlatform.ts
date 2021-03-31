@@ -120,6 +120,7 @@ export default class RFXShutterDynamicPlatform
       new ShutterAccessory(this.log, this.api, accessory, {
         openSeconds: this.config.openSeconds,
         closeSeconds: this.config.closeSeconds,
+        direction: this.config.direction,
       }),
     );
   }
