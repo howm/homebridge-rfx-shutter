@@ -28,7 +28,7 @@
     "@boilerz/tsconfig": "^1.4.10",
     "@boilerz/tsconfig-production": "^1.4.10",
     "@types/jest": "^26.0.22",
-    "eslint": "^7.22.0",
+    "eslint": "^7.23.0",
     "homebridge": "^1.3.4",
     "prettier": "^2.0.5",
     "typescript": "^4"
