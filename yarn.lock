@@ -46,13 +46,13 @@
     "@boilerz/build-tools" "^1.5.1"
     lodash.omit "^4.5.0"
 
-"@boilerz/eslint-config@^2.0.21":
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.21.tgz#af5b09f6b83c4f751c75f999ab9aaccdf9c5abb3"
-  integrity sha512-BGGZI7VeagbOF3m2qsS/U9GZ3iz9o7Cwf0Reevc/gUDChRgm9YrAqyS42widJ7uapu704Datwvt7v9g55yJ37w==
+"@boilerz/eslint-config@^2.0.22":
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.22.tgz#f1e29e0a8c26df65907534a7bc4621edaeb00759"
+  integrity sha512-htVcz7pxsOmKgfOyhZHLLIlZAhynTWABdfVPRBgX3JHI/nToMNY9Bt/hOTZSUIikZNf8jyuOy/5rj+yawKkP+w==
   dependencies:
-    "@typescript-eslint/eslint-plugin" "^4.19.0"
-    "@typescript-eslint/parser" "^4.19.0"
+    "@typescript-eslint/eslint-plugin" "^4.20.0"
+    "@typescript-eslint/parser" "^4.20.0"
     eslint-config-airbnb "^18.2.1"
     eslint-config-prettier "^8.1.0"
     eslint-import-resolver-typescript "^2.4.0"
@@ -273,7 +273,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^4.19.0":
+"@typescript-eslint/eslint-plugin@^4.20.0":
   version "4.20.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.20.0.tgz#9d8794bd99aad9153092ad13c96164e3082e9a92"
   integrity sha512-sw+3HO5aehYqn5w177z2D82ZQlqHCwcKSMboueo7oE4KU9QiC0SAgfS/D4z9xXvpTc8Bt41Raa9fBR8T2tIhoQ==
@@ -299,7 +299,7 @@
     eslint-scope "^5.0.0"
     eslint-utils "^2.0.0"
 
-"@typescript-eslint/parser@^4.19.0":
+"@typescript-eslint/parser@^4.20.0":
   version "4.20.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.20.0.tgz#8dd403c8b4258b99194972d9799e201b8d083bdd"
   integrity sha512-m6vDtgL9EABdjMtKVw5rr6DdeMCH3OA1vFb0dAyuZSa3e5yw1YRzlwFnm9knma9Lz6b2GPvoNSa8vOXrqsaglA==
