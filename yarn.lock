@@ -46,10 +46,10 @@
     "@boilerz/build-tools" "^1.5.1"
     lodash.omit "^4.5.0"
 
-"@boilerz/eslint-config@^2.0.23":
-  version "2.0.23"
-  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.23.tgz#999c07c475e2c067ef3cdd21b709b6442910ec70"
-  integrity sha512-2YoyGec4gEnxh/PCa2s3vU9dpDSrKW0KZDLBKaAoT0FJbuXiM9M8nzwcbjnV1++AD1W2biz9yyAx517qXmGxEw==
+"@boilerz/eslint-config@^2.0.24":
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.24.tgz#e6475aaf1aa0bf4bf5b6b701b238086807041e9c"
+  integrity sha512-aQvlL1rYWVRPw5mNojH2tFOM53SNqCLcCXSxJbrV5FKYgVhScxrTq4yb3roCDhtcBAJR7iycujQpG0QyTPlJWg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.21.0"
     "@typescript-eslint/parser" "^4.21.0"
@@ -59,7 +59,7 @@
     eslint-plugin-import "^2.22.1"
     eslint-plugin-jsx-a11y "^6.4.1"
     eslint-plugin-prettier "^3.3.1"
-    eslint-plugin-react "^7.23.1"
+    eslint-plugin-react "^7.23.2"
     eslint-plugin-react-hooks "^4.2.0"
 
 "@boilerz/prettier-config@^1.0.4":
@@ -1057,10 +1057,10 @@ eslint-plugin-react-hooks@^4.2.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
   integrity sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
 
-eslint-plugin-react@^7.23.1:
-  version "7.23.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.23.1.tgz#f1a2e844c0d1967c822388204a8bc4dee8415b11"
-  integrity sha512-MvFGhZjI8Z4HusajmSw0ougGrq3Gs4vT/0WgwksZgf5RrLrRa2oYAw56okU4tZJl8+j7IYNuTM+2RnFEuTSdRQ==
+eslint-plugin-react@^7.23.2:
+  version "7.23.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.23.2.tgz#2d2291b0f95c03728b55869f01102290e792d494"
+  integrity sha512-AfjgFQB+nYszudkxRkTFu0UR1zEQig0ArVMPloKhxwlwkzaw/fBiH0QWcBBhZONlXqQC51+nfqFrkn4EzHcGBw==
   dependencies:
     array-includes "^3.1.3"
     array.prototype.flatmap "^1.2.4"
