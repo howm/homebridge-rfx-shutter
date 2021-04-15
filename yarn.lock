@@ -46,15 +46,15 @@
     "@boilerz/build-tools" "^1.5.1"
     lodash.omit "^4.5.0"
 
-"@boilerz/eslint-config@^2.0.25":
-  version "2.0.25"
-  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.25.tgz#b98be2061aac6d255c437ea3433cc6ecae65ac2b"
-  integrity sha512-a13AaBSKYZaYIzNnvoXvIdphwrrKWeAh2buo54vnBjtquK0O6nIiAqhsSWePSC3u1Ehz1JThL6E6DaEkyUtPnw==
+"@boilerz/eslint-config@^2.0.26":
+  version "2.0.26"
+  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.26.tgz#cc370bb6fefb9f1f8e9db4a33931680643409e0e"
+  integrity sha512-iDGSCCQLCklnq9/JT2296qeVRBEjUQcoRSbGp0RF1YOYvf0PVo0VbQZUdXW6WFBViMFQ1MhICIG0DeidOBn20g==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.22.0"
     "@typescript-eslint/parser" "^4.22.0"
     eslint-config-airbnb "^18.2.1"
-    eslint-config-prettier "^8.1.0"
+    eslint-config-prettier "^8.2.0"
     eslint-import-resolver-typescript "^2.4.0"
     eslint-plugin-import "^2.22.1"
     eslint-plugin-jsx-a11y "^6.4.1"
@@ -977,10 +977,10 @@ eslint-config-airbnb@^18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-prettier@^8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.1.0.tgz#4ef1eaf97afe5176e6a75ddfb57c335121abc5a6"
-  integrity sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==
+eslint-config-prettier@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.2.0.tgz#78de77d63bca8e9e59dae75a614b5299925bb7b3"
+  integrity sha512-dWV9EVeSo2qodOPi1iBYU/x6F6diHv8uujxbxr77xExs3zTAlNXvVZKiyLsQGNz7yPV2K49JY5WjPzNIuDc2Bw==
 
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"
