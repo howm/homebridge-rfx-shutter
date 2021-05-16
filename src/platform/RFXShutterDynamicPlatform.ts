@@ -26,7 +26,8 @@ interface RFXShutterConfig extends PlatformConfig, ShutterAccessoryConfig {
 }
 
 export default class RFXShutterDynamicPlatform
-  implements DynamicPlatformPlugin {
+  implements DynamicPlatformPlugin
+{
   private readonly log: Logging;
 
   private readonly api: API;
@@ -49,64 +50,56 @@ export default class RFXShutterDynamicPlatform
 
     setup(config.tty || DEFAULT_TTY);
 
-    this.api.on(
-      APIEvent.DID_FINISH_LAUNCHING,
-      async (): Promise<void> => {
-        log('[constructor] Listing shutters ...');
-        const remotes: Remote[] = await listRemotes(log);
-        log(
-          '[constructor] Found',
-          remotes.length,
-          'already detected',
-          this.accessoryByDeviceId.size,
+    this.api.on(APIEvent.DID_FINISH_LAUNCHING, async (): Promise<void> => {
+      log('[constructor] Listing shutters ...');
+      const remotes: Remote[] = await listRemotes(log);
+      log(
+        '[constructor] Found',
+        remotes.length,
+        'already detected',
+        this.accessoryByDeviceId.size,
+      );
+
+      remotes.forEach((remote: Remote): void => {
+        const isExcludedDevice = this.config.excludedDeviceIds?.includes(
+          remote.deviceId,
         );
 
-        remotes.forEach((remote: Remote): void => {
-          const isExcludedDevice = this.config.excludedDeviceIds?.includes(
-            remote.deviceId,
-          );
-
-          if (this.accessoryByDeviceId.has(remote.deviceId)) {
-            if (isExcludedDevice) {
-              const {
-                accessory,
-              }: ShutterAccessory = this.accessoryByDeviceId.get(
-                remote.deviceId,
-              )!;
-              this.api.unregisterPlatformAccessories(
-                PLUGIN_NAME,
-                PLATFORM_NAME,
-                [accessory],
-              );
-            }
-            return;
+        if (this.accessoryByDeviceId.has(remote.deviceId)) {
+          if (isExcludedDevice) {
+            const { accessory }: ShutterAccessory =
+              this.accessoryByDeviceId.get(remote.deviceId)!;
+            this.api.unregisterPlatformAccessories(PLUGIN_NAME, PLATFORM_NAME, [
+              accessory,
+            ]);
           }
+          return;
+        }
 
-          if (isExcludedDevice) return;
+        if (isExcludedDevice) return;
 
-          const displayName = `Shutter ${remote.deviceId}`;
-          const accessory = new Accessory(
-            displayName,
-            this.hap.uuid.generate(remote.deviceId),
-          );
+        const displayName = `Shutter ${remote.deviceId}`;
+        const accessory = new Accessory(
+          displayName,
+          this.hap.uuid.generate(remote.deviceId),
+        );
 
-          accessory.context = {
-            deviceId: remote.deviceId,
-          };
+        accessory.context = {
+          deviceId: remote.deviceId,
+        };
 
-          this.log('[constructor] Adding', displayName);
-          accessory.addService(
-            this.hap.Service.WindowCovering,
-            `RFX / ${displayName}`,
-          );
+        this.log('[constructor] Adding', displayName);
+        accessory.addService(
+          this.hap.Service.WindowCovering,
+          `RFX / ${displayName}`,
+        );
 
-          this.configureAccessory(accessory);
-          this.api.registerPlatformAccessories(PLUGIN_NAME, PLATFORM_NAME, [
-            accessory,
-          ]);
-        });
-      },
-    );
+        this.configureAccessory(accessory);
+        this.api.registerPlatformAccessories(PLUGIN_NAME, PLATFORM_NAME, [
+          accessory,
+        ]);
+      });
+    });
   }
 
   public configureAccessory(accessory: PlatformAccessory): void {
