@@ -81,12 +81,12 @@
   dependencies:
     "@tsconfig/node14" "^1.0.0"
 
-"@boilerz/tsconfig@^1.4.14":
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig/-/tsconfig-1.4.14.tgz#1b7763455de3201e4dfe97488e327d1efe1c05e3"
-  integrity sha512-DDfOd9TR59WM5yBbUdBctj2h3I8sIQIYKpmdPl3mnN/stxUWQIKalXf3B6dpcvQyFlZGzh6KsO+vsvR3ucFQxQ==
+"@boilerz/tsconfig@^1.4.15":
+  version "1.4.15"
+  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig/-/tsconfig-1.4.15.tgz#284f5895f68ca9ac6f8f1b8277139b5a53c132ba"
+  integrity sha512-7eUJ8zw46heuAhsIesmfgcpY/I2KWbMODtXitih9UW7MZ+Cv77SzZr9ord6TVZyr3a7FpZDoBCazExMKVdv4Ug==
   dependencies:
-    "@tsconfig/node14" "^1.0.0"
+    "@tsconfig/node16" "^1.0.2"
 
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
@@ -246,6 +246,11 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@tsconfig/node14/-/node14-1.0.0.tgz#5bd046e508b1ee90bc091766758838741fdefd6e"
   integrity sha512-RKkL8eTdPv6t5EHgFKIVQgsDapugbuOptNd9OOunN/HAkzmmTnZELx1kNCK0rSdUYGmiFMM3rRQMAWiyp023LQ==
+
+"@tsconfig/node16@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
+  integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
