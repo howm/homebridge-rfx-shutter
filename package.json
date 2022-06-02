@@ -27,7 +27,7 @@
     "@boilerz/prettier-config": "^1.0.4",
     "@boilerz/tsconfig": "^1.4.15",
     "@boilerz/tsconfig-production": "^1.4.15",
-    "@types/jest": "^27.5.1",
+    "@types/jest": "^28.1.0",
     "eslint": "^7.32.0",
     "homebridge": "^1.4.1",
     "prettier": "^2.6.2",
