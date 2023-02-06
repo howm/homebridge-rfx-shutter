@@ -822,10 +822,10 @@ damerau-levenshtein@^1.0.7:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.7.tgz#64368003512a1a6992593741a09a9d31a836f55d"
   integrity sha512-VvdQIPGdWP0SqFXghj79Wf/5LArmreyMsGLa6FG6iC4t3j7j5s71TrwWmT/4akbDQIqjfACkLZmjXhA7g2oUZw==
 
-date-format@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/date-format/-/date-format-3.0.0.tgz#eb8780365c7d2b1511078fb491e6479780f3ad95"
-  integrity sha512-eyTcpKOcamdhWJXj56DpQMo1ylSQpcGtGKXcU0Tb97+K56/CF5amAqqqNj0+KvA0iw2ynxtHWFsPDSClCxe48w==
+date-format@^4.0.0:
+  version "4.0.14"
+  resolved "https://registry.yarnpkg.com/date-format/-/date-format-4.0.14.tgz#7a8e584434fb169a521c8b7aa481f355810d9400"
+  integrity sha512-39BOQLs9ZjKh0/patS9nrT8wc3ioX3/eA/zgbKNopnF2wCqJEoxywwwElATYvRsXdnOxA/OQeQoFZ3rFjVajhg==
 
 debug@^2.6.9:
   version "2.6.9"
@@ -2701,12 +2701,12 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
-rfxcom@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/rfxcom/-/rfxcom-2.4.1.tgz#2cf78ccd50d028c47a2f8944551e3b08d94b6177"
-  integrity sha512-wdgSFezv1m5EFtWZorHthPI6Tm8nf0lCMLxMI3mgxEpm5goY4OdsIdO++rmvZaHUVdJt5UfxTj7zUcT3xnXPJg==
+rfxcom@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/rfxcom/-/rfxcom-2.5.0.tgz#45b7c48b15a6d5294c286a702ac35ad330a74c08"
+  integrity sha512-irslbmgw9ABzZjwqLeB1djJ4rWJG7CSV0vvI3BvcGej4W/CnRG2LcX6OavyoJ3WSB4W78hh8Eq4/nUJUf+6nkA==
   dependencies:
-    date-format "^3.0.0"
+    date-format "^4.0.0"
     queue "^6.0.2"
     serialport "^9.0.4"
 
