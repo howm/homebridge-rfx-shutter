@@ -31,7 +31,7 @@
     "eslint": "^7.32.0",
     "homebridge": "^1.6.0",
     "prettier": "^2.8.4",
-    "typescript": "^4"
+    "typescript": "^5"
   },
   "greenkeeper": {
     "commitMessages": {
