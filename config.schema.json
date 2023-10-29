@@ -1,0 +1,55 @@
+{
+  "pluginAlias": "RFXShutterDynamicPlatform",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Homebridge plugin for shutters controlled by RFXtrx433(E) transceivers.",
+  "footerDisplay": "",
+  "schema": {
+    "name": {
+      "title": "RFX Shutter Platform",
+      "type": "string",
+      "default": "RFXShutterDynamicPlatform",
+      "required": true
+    },
+    "tty": {
+      "title": "Serial Port",
+      "description": "e.g. '/dev/ttyUSB0'",
+      "type": "string",
+      "default": "/dev/ttyUSB0",
+      "required": true
+    },
+    "direction": {
+      "title": "Direction",
+      "description": "option is here to support blinds that use the opposite direction.  normal / reverse " ,
+      "type": "string",
+      "default": "normal",
+      "required": false
+    },
+    "openSeconds": {
+      "title": "openSeconds",
+      "description": "optional time for shutter to open, by default they are set to 25",
+      "type": "integer",
+      "default": 25,
+      "required": false
+    },
+    "closeSeconds": {
+      "title": "closeSeconds",
+      "description": "optional time for shutter to close, by default they are set to 22",
+      "type": "integer",
+      "default": 22,
+      "required": false
+    },
+    "excludedDeviceIds": {
+      "title": "excludedDeviceIds",
+      "description": "option can be used to remove any shutter or shutter group to the platform.",
+      "type": "array",
+      "items":{
+              "type": "string",
+              "name": "Serial number"
+              },
+      "required": false
+    }
+  },
+  "form": null,
+  "display": null
+}
