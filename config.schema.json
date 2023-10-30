@@ -5,6 +5,12 @@
   "headerDisplay": "Homebridge plugin for shutters controlled by RFXtrx433(E) transceivers.",
   "footerDisplay": "",
   "schema": {
+    "platform": {
+      "title": "RFX Shutter Platform",
+      "type": "string",
+      "default": "homebridge RFX Shutter",
+      "required": true
+    },
     "name": {
       "title": "RFX Shutter Platform",
       "type": "string",
