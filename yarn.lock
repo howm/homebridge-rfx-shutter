@@ -2456,10 +2456,10 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
-rfxcom@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/rfxcom/-/rfxcom-2.6.1.tgz#0d93083daaa003a17ff937e33e7c7495e46f72e3"
-  integrity sha512-BxuPd5Pt9EexviZ66vD2CFAPc259erPuKbWdmMqZBUBSmlpakSEK9pYJ9SXGmfap8wp/P1/e7t1R10/YjbgGDw==
+rfxcom@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/rfxcom/-/rfxcom-2.6.2.tgz#0025805fc0ece7e2f4c91769be4235232144358b"
+  integrity sha512-DXpYpi9qkHaUiEpUQUYlaqT2jtu40ANrShJq2PeBXRbrylhKxRBfSvH3lnQUJ3Bq6Cala3hakag/IzmEEfFY/Q==
   dependencies:
     date-format "^4.0.14"
     queue "^6.0.2"

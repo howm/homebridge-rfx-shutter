@@ -48,7 +48,7 @@
     "homebridge": "^1.6.1"
   },
   "dependencies": {
-    "rfxcom": "^2.6.1",
+    "rfxcom": "^2.6.2",
     "waait": "^1.0.5"
   }
 }
