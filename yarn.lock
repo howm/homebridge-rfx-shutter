@@ -1657,10 +1657,10 @@ hexy@^0.3.5:
   resolved "https://registry.yarnpkg.com/hexy/-/hexy-0.3.5.tgz#adcd5ee47d66aca3581d771743a509a5176e45f9"
   integrity sha512-UCP7TIZPXz5kxYJnNOym+9xaenxCLor/JyhKieo8y8/bJWunGh9xbhy3YrgYJUQ87WwfXGm05X330DszOfINZw==
 
-homebridge@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.8.0.tgz#769bbc91cae0b2d1e5d4179a27e96c5a0c12a757"
-  integrity sha512-nPb9rPIUIjJ1boxa3h4/ARxmESNyoCEa2gAKP/1BHqSXNMDPXIZNw6nDzCmj15XIda/m1djCE21K+b44BiMJhQ==
+homebridge@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.8.1.tgz#bdd60a73274cf820169e8bec02baa9fa4ae29f49"
+  integrity sha512-tcyjT79m1SxBHf3bQyI9IEsXN0m1y0GPxPWvwhdJEycdliK0OyuYxzx4w1M5c7PHZknkZbQWCxFyaMTh7DHKUA==
   dependencies:
     chalk "4.1.2"
     commander "12.0.0"
