@@ -29,7 +29,7 @@
     "@boilerz/tsconfig-production": "^1.4.19",
     "@types/jest": "^29.5.12",
     "eslint": "^7.32.0",
-    "homebridge": "^1.8.0",
+    "homebridge": "^1.8.1",
     "prettier": "^2.8.8",
     "typescript": "^5"
   },
@@ -45,7 +45,7 @@
     }
   },
   "peerDependencies": {
-    "homebridge": "^1.8.0"
+    "homebridge": "^1.8.1"
   },
   "dependencies": {
     "rfxcom": "^2.6.2",
