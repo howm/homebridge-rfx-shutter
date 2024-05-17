@@ -1561,10 +1561,10 @@ graceful-fs@^4.2.9:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
 
-hap-nodejs@0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/hap-nodejs/-/hap-nodejs-0.12.0.tgz#b0ec016ad2a5dfc296101be40b73d80472f44d17"
-  integrity sha512-W+KPE4kCtudt/WTEHlXLiZmgIC5IgK8TXpUPmp27Qm7TOfKwWVGhKYXWRBEr3bkgSe3CGuGQN8vFeRB//mpfhQ==
+hap-nodejs@0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/hap-nodejs/-/hap-nodejs-0.12.1.tgz#5209ee22a0563cfbd1b376c18f226eb20d35bc85"
+  integrity sha512-iUUMaK6ucDKLMjT4m5Oz6CoLKkGg+omI6GR96weyL8fPGR1HYoCMtoJoUNW2NSIp4b2A6hx4zjNOEtLEaTA2MQ==
   dependencies:
     "@homebridge/ciao" "^1.2.0"
     "@homebridge/dbus-native" "^0.6.0"
@@ -1657,17 +1657,17 @@ hexy@^0.3.5:
   resolved "https://registry.yarnpkg.com/hexy/-/hexy-0.3.5.tgz#adcd5ee47d66aca3581d771743a509a5176e45f9"
   integrity sha512-UCP7TIZPXz5kxYJnNOym+9xaenxCLor/JyhKieo8y8/bJWunGh9xbhy3YrgYJUQ87WwfXGm05X330DszOfINZw==
 
-homebridge@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.8.1.tgz#bdd60a73274cf820169e8bec02baa9fa4ae29f49"
-  integrity sha512-tcyjT79m1SxBHf3bQyI9IEsXN0m1y0GPxPWvwhdJEycdliK0OyuYxzx4w1M5c7PHZknkZbQWCxFyaMTh7DHKUA==
+homebridge@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.8.2.tgz#bc4a767273840edabeb2ca945cc33070f267967d"
+  integrity sha512-K0P9/qk3RdAKGLhGrmtF4skUjcygNlnBu0S/ssKIdp4p0kMzW2wjw2Q+z7TCxgZVy84/kaR09UD1n6uJAunTOQ==
   dependencies:
     chalk "4.1.2"
     commander "12.0.0"
     fs-extra "11.2.0"
-    hap-nodejs "0.12.0"
+    hap-nodejs "0.12.1"
     qrcode-terminal "0.12.0"
-    semver "7.6.0"
+    semver "7.6.2"
     source-map-support "0.5.21"
 
 ignore@^4.0.6:
@@ -2122,13 +2122,6 @@ loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lru-cache@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
-  integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
-  dependencies:
-    yallist "^4.0.0"
-
 map-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.0.7.tgz#8a1f07896d82b10926bd3744a2420009f88974a8"
@@ -2578,12 +2571,10 @@ sax@>=0.6.0:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-semver@7.6.0, semver@^7.2.1, semver@^7.3.5:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.0.tgz#1a46a4db4bffcccd97b743b5005c8325f23d4e2d"
-  integrity sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==
-  dependencies:
-    lru-cache "^6.0.0"
+semver@7.6.2, semver@^7.2.1, semver@^7.3.5:
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.2.tgz#1e3b34759f896e8f14d6134732ce798aeb0c6e13"
+  integrity sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==
 
 semver@^6.3.0:
   version "6.3.0"
@@ -2991,8 +2982,3 @@ xmlbuilder@~11.0.0:
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-11.0.1.tgz#be9bae1c8a046e76b31127726347d0ad7002beb3"
   integrity sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==
-
-yallist@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
-  integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
