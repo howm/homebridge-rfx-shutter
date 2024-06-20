@@ -754,10 +754,10 @@ color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-commander@12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-12.0.0.tgz#b929db6df8546080adfd004ab215ed48cf6f2592"
-  integrity sha512-MwVNWlYjDTtOjX5PiD7o5pK0UrFU/OYgcJfjjK4RaHZETNtjJqrZa9Y9ds88+A+f+d5lv+561eZ+yCKoS3gbAA==
+commander@12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-12.1.0.tgz#01423b36f501259fdaac4d0e4d60c96c991585d3"
+  integrity sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -818,6 +818,13 @@ debug@^4.0.1, debug@^4.1.1, debug@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
+  dependencies:
+    ms "2.1.2"
+
+debug@^4.3.5:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.5.tgz#e83444eceb9fedd4a1da56d671ae2446a01a6e1e"
+  integrity sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==
   dependencies:
     ms "2.1.2"
 
@@ -1561,18 +1568,18 @@ graceful-fs@^4.2.9:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
 
-hap-nodejs@0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/hap-nodejs/-/hap-nodejs-0.12.1.tgz#5209ee22a0563cfbd1b376c18f226eb20d35bc85"
-  integrity sha512-iUUMaK6ucDKLMjT4m5Oz6CoLKkGg+omI6GR96weyL8fPGR1HYoCMtoJoUNW2NSIp4b2A6hx4zjNOEtLEaTA2MQ==
+hap-nodejs@0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/hap-nodejs/-/hap-nodejs-0.12.2.tgz#dd0a18cc6421bc871aefc4a05e4f702dd045c2f7"
+  integrity sha512-EAgcBOxxMaWKkRfuGc8FBVJO5/OCFM2jMt5+szkqazWLKANkRLrvf/GtQnPsl6GUuLiWYddLZ/zwasayU8ljQQ==
   dependencies:
     "@homebridge/ciao" "^1.2.0"
     "@homebridge/dbus-native" "^0.6.0"
     bonjour-hap "^3.7.2"
-    debug "^4.3.4"
+    debug "^4.3.5"
     fast-srp-hap "^2.0.4"
     futoin-hkdf "^1.5.3"
-    node-persist "^0.0.11"
+    node-persist "^0.0.12"
     source-map-support "^0.5.21"
     tslib "^2.6.2"
     tweetnacl "^1.0.3"
@@ -1657,15 +1664,15 @@ hexy@^0.3.5:
   resolved "https://registry.yarnpkg.com/hexy/-/hexy-0.3.5.tgz#adcd5ee47d66aca3581d771743a509a5176e45f9"
   integrity sha512-UCP7TIZPXz5kxYJnNOym+9xaenxCLor/JyhKieo8y8/bJWunGh9xbhy3YrgYJUQ87WwfXGm05X330DszOfINZw==
 
-homebridge@^1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.8.2.tgz#bc4a767273840edabeb2ca945cc33070f267967d"
-  integrity sha512-K0P9/qk3RdAKGLhGrmtF4skUjcygNlnBu0S/ssKIdp4p0kMzW2wjw2Q+z7TCxgZVy84/kaR09UD1n6uJAunTOQ==
+homebridge@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.8.3.tgz#7c70c1457daf86b37d0242092c20730285a19236"
+  integrity sha512-2s8BSV56xf+jGDguKqfpK0Kd14ciWBzX+YpN3iXW7BYF9IVzl4ai/XuoyeG0jMyWB+GN7KgifkAs0IYCAku/BA==
   dependencies:
     chalk "4.1.2"
-    commander "12.0.0"
+    commander "12.1.0"
     fs-extra "11.2.0"
-    hap-nodejs "0.12.1"
+    hap-nodejs "0.12.2"
     qrcode-terminal "0.12.0"
     semver "7.6.2"
     source-map-support "0.5.21"
@@ -2210,10 +2217,10 @@ node-gyp-build@4.6.0:
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.6.0.tgz#0c52e4cbf54bbd28b709820ef7b6a3c2d6209055"
   integrity sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==
 
-node-persist@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/node-persist/-/node-persist-0.0.11.tgz#d66eba3ebef620f079530fa7b13076a906665874"
-  integrity sha1-1m66Pr72IPB5Uw+nsTB2qQZmWHQ=
+node-persist@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/node-persist/-/node-persist-0.0.12.tgz#1535d1a288b956357e328223dc83d6692de99ba1"
+  integrity sha512-Fbia3FYnURzaql53wLu0t19dmAwQg/tXT6O7YPmdwNwysNKEyFmgoT2BQlPD3XXQnYeiQVNvR5lfvufGwKuxhg==
   dependencies:
     mkdirp "~0.5.1"
     q "~1.1.1"
