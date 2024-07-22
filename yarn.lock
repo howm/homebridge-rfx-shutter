@@ -1664,17 +1664,17 @@ hexy@^0.3.5:
   resolved "https://registry.yarnpkg.com/hexy/-/hexy-0.3.5.tgz#adcd5ee47d66aca3581d771743a509a5176e45f9"
   integrity sha512-UCP7TIZPXz5kxYJnNOym+9xaenxCLor/JyhKieo8y8/bJWunGh9xbhy3YrgYJUQ87WwfXGm05X330DszOfINZw==
 
-homebridge@^1.8.3:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.8.3.tgz#7c70c1457daf86b37d0242092c20730285a19236"
-  integrity sha512-2s8BSV56xf+jGDguKqfpK0Kd14ciWBzX+YpN3iXW7BYF9IVzl4ai/XuoyeG0jMyWB+GN7KgifkAs0IYCAku/BA==
+homebridge@^1.8.4:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.8.4.tgz#1e2159a24628b5cbeb6665c0fd0f3004ce09a58c"
+  integrity sha512-Wr5QdI/OCpxCM3rdXyuPUxNlbuwiFngnuj+ZsrCbg5cMwKRMfN+RRGiW2LUSY2BDGQC0cSUt/9TF6tIlov16Qw==
   dependencies:
     chalk "4.1.2"
     commander "12.1.0"
     fs-extra "11.2.0"
     hap-nodejs "0.12.2"
     qrcode-terminal "0.12.0"
-    semver "7.6.2"
+    semver "7.6.3"
     source-map-support "0.5.21"
 
 ignore@^4.0.6:
@@ -2578,10 +2578,10 @@ sax@>=0.6.0:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-semver@7.6.2, semver@^7.2.1, semver@^7.3.5:
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.2.tgz#1e3b34759f896e8f14d6134732ce798aeb0c6e13"
-  integrity sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==
+semver@7.6.3, semver@^7.2.1, semver@^7.3.5:
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.3.tgz#980f7b5550bc175fb4dc09403085627f9eb33143"
+  integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
 
 semver@^6.3.0:
   version "6.3.0"
