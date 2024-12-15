@@ -1,0 +1,15 @@
+{
+  "name": "RFXShutterDynamicPlatform",
+    "tty": "/dev/ttyUSB0",
+    "openSeconds": 20,
+    "closeSeconds": 20,
+    "excludedDeviceIds": [
+        "0xxx",
+        "0xxx"
+    ],
+    "_bridge": {
+        "username": "xx:xx:xx:xx:xx:xx",
+        "port": xxxxx
+    },
+    "platform": "RFXShutterDynamicPlatform"
+}
