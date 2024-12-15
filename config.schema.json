@@ -7,6 +7,7 @@
         "0xxx",
         "0xxx"
     ],
+    "direction": "normal",
     "_bridge": {
         "username": "xx:xx:xx:xx:xx:xx",
         "port": xxxxx
