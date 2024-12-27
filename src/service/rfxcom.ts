@@ -13,6 +13,8 @@ export interface Remote {
   unitCode: number;
   randomCode: number;
   rollingCode: number;
+  currentPosition: number;
+  targetPosition: number;
 }
 
 export enum ShutterAction {
