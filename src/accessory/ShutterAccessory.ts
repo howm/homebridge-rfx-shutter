@@ -13,6 +13,8 @@ import wait from 'waait';
 
 import { ShutterAction, fireShutterAction } from '../service/rfxcom';
 
+const DEFAULT_CURRENT_POSITION = 0;
+const DEFAULT_TARGET_POSITION = 0;
 const DEFAULT_OPEN_SECONDS = 25;
 const DEFAULT_CLOSE_SECONDS = 22;
 enum PositionState {
@@ -36,11 +38,7 @@ export default class ShutterAccessory {
 
   public readonly accessory: PlatformAccessory;
 
-  private currentPosition = 0;
-
-  private targetPosition = 0;
-
-  private readonly deviceId: string;
+  private readonly serial: string;
 
   private positionState: number = PositionState.STOPPED;
 
@@ -55,13 +53,15 @@ export default class ShutterAccessory {
     this.log = log;
     this.hap = api.hap;
     this.accessory = accessory;
-    this.deviceId = accessory.context.deviceId;
+    this.serial = accessory.context.deviceId;
     this.config = {
       openSeconds: config.openSeconds || DEFAULT_OPEN_SECONDS,
       closeSeconds: config.closeSeconds || DEFAULT_CLOSE_SECONDS,
       direction: config.direction || 'normal',
     };
 
+    this.currentPosition = this.hap.Service.getItemSync(`currentPosition_${this.serial}`) || DEFAULT_CURRENT_POSITION;
+    this.targetPosition = this.hap.Service.getItemSync(`targetPosition_${this.serial}`) || DEFAULT_TARGET_POSITION;
     accessory.on(PlatformAccessoryEvent.IDENTIFY, (): void => {
       this.log(accessory.displayName, ' identified!');
     });
@@ -80,7 +80,7 @@ export default class ShutterAccessory {
     );
     accessoryInformationService?.setCharacteristic(
       this.hap.Characteristic.SerialNumber,
-      this.deviceId,
+      this.serial,
     );
 
     // WindowCovering
@@ -102,12 +102,12 @@ export default class ShutterAccessory {
   }
 
   public getCurrentPosition(cb: CharacteristicGetCallback): void {
-    this.log(`getCurrentPosition ${this.currentPosition} for ${this.deviceId}`);
+    this.log(`getCurrentPosition ${this.currentPosition} for ${this.serial}`);
     cb(null, this.currentPosition);
   }
 
   public getTargetPosition(cb: CharacteristicGetCallback): void {
-    this.log(`getTargetPosition ${this.targetPosition} for ${this.deviceId}`);
+    this.log(`getTargetPosition ${this.targetPosition} for ${this.serial}`);
     cb(null, this.targetPosition);
   }
 
@@ -122,7 +122,9 @@ export default class ShutterAccessory {
     value: CharacteristicValue,
     cb: CharacteristicSetCallback,
   ): Promise<void> {
-    this.log(`setTargetPosition ${value} for ${this.deviceId}`);
+    this.log(`setTargetPosition ${value} for ${this.serial}`);
+    // Save to cache
+    this.hap.Service.setItemSync(`targetPosition_${this.serial}`, value);
     /**
      * It seems that the cb need to be called to say that we understand the action. When delayed
      * until the position stop Siri complain about communication problem with the device.
@@ -137,7 +139,7 @@ export default class ShutterAccessory {
     this.setPositionState(
       up ? PositionState.INCREASING : PositionState.DECREASING,
     );
-    fireShutterAction(this.deviceId, this.getShutterAction(up));
+    fireShutterAction(this.serial, this.getShutterAction(up));
 
     await wait(
       (Math.abs(this.targetPosition - this.currentPosition) / 100) *
@@ -147,27 +149,29 @@ export default class ShutterAccessory {
     if (this.targetPosition !== 100 && this.targetPosition !== 0) {
       // Otherwise the stop button will fire the "memo" command
       this.log(`fireShutterAction ${ShutterAction.STOP}`);
-      fireShutterAction(this.deviceId, ShutterAction.STOP);
+      fireShutterAction(this.serial, ShutterAction.STOP);
     }
     this.setPositionState(PositionState.STOPPED);
     this.setCurrentPosition(this.targetPosition);
   }
 
   public setCurrentPosition(value: number): void {
-    this.log(`setCurrentPosition to ${value} for ${this.deviceId}`);
+    this.log(`setCurrentPosition to ${value} for ${this.serial}`);
     this.currentPosition = value;
+    // Save to cache
+    this.hap.Service.setItemSync(`currentPosition_${this.serial}`, value);
     this.accessory
       .getService(this.hap.Service.WindowCovering)!
       .setCharacteristic(this.hap.Characteristic.CurrentPosition, value);
   }
 
   public getPositionState(cb: CharacteristicGetCallback): void {
-    this.log(`getPositionState ${this.positionState} for ${this.deviceId}`);
+    this.log(`getPositionState ${this.positionState} for ${this.serial}`);
     cb(null, this.positionState);
   }
 
   public setPositionState(positionState: PositionState): void {
-    this.log(`setPositionState to ${positionState} for ${this.deviceId}`);
+    this.log(`setPositionState to ${positionState} for ${this.serial}`);
     this.positionState = positionState;
     this.accessory
       .getService(this.hap.Service.WindowCovering)!
