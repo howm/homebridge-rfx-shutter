@@ -27,6 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install dependencies
+      run: npm install -g homebridge
       run: yarn
     - run: npm ci
     - run: npm run build --if-present
