@@ -87,7 +87,7 @@ export default class RFXShutterDynamicPlatform
         accessory.context = {
           deviceId: remote.deviceId,
           currentPosition: remote.currentPosition,
-          targetPosition: 5,
+          targetPosition: remote.targetPosition,
         };
 
         this.log('[constructor] Adding', displayName);
