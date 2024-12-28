@@ -20,7 +20,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc",
     "build": "buildTSPackage && cp -rf images dist && cp V1_README.md dist",
-    "test": "jest --coverage"
+    "test": "jest --coverage --passWithNoTests"
   },
   "devDependencies": {
     "@boilerz/build-tools": "^1.5.124",
