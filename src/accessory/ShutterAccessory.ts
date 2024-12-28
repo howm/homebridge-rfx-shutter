@@ -60,8 +60,8 @@ export default class ShutterAccessory {
       direction: config.direction || 'normal',
     };
 
-    this.currentPosition = this.hap.Service.getItemSync(`currentPosition_${this.serial}`) || DEFAULT_CURRENT_POSITION;
-    this.targetPosition = this.hap.Service.getItemSync(`targetPosition_${this.serial}`) || DEFAULT_TARGET_POSITION;
+    this.currentPosition = this.api.platformAccessory.getItemSync(`currentPosition_${this.serial}`) || DEFAULT_CURRENT_POSITION;
+    this.targetPosition = this.api.platformAccessory.getItemSync(`targetPosition_${this.serial}`) || DEFAULT_TARGET_POSITION;
     accessory.on(PlatformAccessoryEvent.IDENTIFY, (): void => {
       this.log(accessory.displayName, ' identified!');
     });
@@ -124,7 +124,7 @@ export default class ShutterAccessory {
   ): Promise<void> {
     this.log(`setTargetPosition ${value} for ${this.serial}`);
     // Save to cache
-    this.hap.Service.setItemSync(`targetPosition_${this.serial}`, value);
+    this.api.platformAccessory.setItemSync(`targetPosition_${this.serial}`, value);
     /**
      * It seems that the cb need to be called to say that we understand the action. When delayed
      * until the position stop Siri complain about communication problem with the device.
@@ -159,7 +159,7 @@ export default class ShutterAccessory {
     this.log(`setCurrentPosition to ${value} for ${this.serial}`);
     this.currentPosition = value;
     // Save to cache
-    this.hap.Service.setItemSync(`currentPosition_${this.serial}`, value);
+    this.api.platformAccessory.setItemSync(`currentPosition_${this.serial}`, value);
     this.accessory
       .getService(this.hap.Service.WindowCovering)!
       .setCharacteristic(this.hap.Characteristic.CurrentPosition, value);
