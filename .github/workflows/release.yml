@@ -34,7 +34,7 @@ jobs:
         with:
           publishDirectory: 'dist'
           buildStep: 'true'
-          publishToGithub: 'false'
+          publishToGithub: 'true'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${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}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
