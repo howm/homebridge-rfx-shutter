@@ -10,13 +10,15 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v10
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v10
         with:
           node-version: '22.x'
 
-      - uses: actions/cache@v4
+      - uses: actions/cache@v10
         id: yarn-cache
         with:
           path: '**/node_modules'
@@ -35,4 +37,4 @@ jobs:
           publishToGithub: 'false'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_BOILERZ_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
