@@ -40,6 +40,10 @@ export default class ShutterAccessory {
 
   private readonly serial: string;
 
+  private currentPosition = number || DEFAULT_CURRENT_POSITION;
+
+  private targetPosition = number || DEFAULT_CURRENT_POSITION;
+
   private positionState: number = PositionState.STOPPED;
 
   private readonly config: Required<ShutterAccessoryConfig>;
@@ -60,8 +64,8 @@ export default class ShutterAccessory {
       direction: config.direction || 'normal',
     };
 
-    this.currentPosition = this.api.platformAccessory.getItemSync(`currentPosition_${this.serial}`) || DEFAULT_CURRENT_POSITION;
-    this.targetPosition = this.api.platformAccessory.getItemSync(`targetPosition_${this.serial}`) || DEFAULT_TARGET_POSITION;
+    this.currentPosition = this.api.platformAccessory.getItemSync(`currentPosition_${this.serial}`);
+    this.targetPosition = this.api.platformAccessory.getItemSync(`targetPosition_${this.serial}`);
     accessory.on(PlatformAccessoryEvent.IDENTIFY, (): void => {
       this.log(accessory.displayName, ' identified!');
     });
