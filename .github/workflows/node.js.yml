@@ -30,7 +30,7 @@ jobs:
       run: npm install -g homebridge
     - name: Install dependencies
       run: yarn
-    - run: npm install -g npm@5
+    - run: npm install -g npm@10
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
