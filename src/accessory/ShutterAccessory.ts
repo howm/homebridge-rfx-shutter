@@ -66,10 +66,10 @@ export default class ShutterAccessory {
     };
 
     // this.currentPosition = this.hap.Service.getItemSync(`currentPosition_${this.serial}`);
-    this.currentPosition = 
+    this.currentPosition =
       cache[`currentPosition_${this.serial}`] || DEFAULT_CURRENT_POSITION;
     // this.targetPosition = this.hap.Service.getItemSync(`targetPosition_${this.serial}`);
-    this.targetPosition = 
+    this.targetPosition =
       cache[`targetPosition_${this.serial}`] || DEFAULT_TARGET_POSITION;
     accessory.on(PlatformAccessoryEvent.IDENTIFY, (): void => {
       this.log(accessory.displayName, ' identified!');
