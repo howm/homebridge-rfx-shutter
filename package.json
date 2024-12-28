@@ -16,6 +16,7 @@
     "homebridge": "^1.8.5 || ^2.0.0-beta.0"
   },
   "scripts": {
+    "format": "prettier --write ."
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc",
     "build": "buildTSPackage && cp -rf images dist && cp V1_README.md dist",
