@@ -41,9 +41,9 @@ export default class ShutterAccessory {
 
   private readonly serial: string;
 
-  private currentPosition = value as number ; // || DEFAULT_CURRENT_POSITION;
+  private currentPosition; //= value as number || DEFAULT_CURRENT_POSITION;
 
-  private targetPosition; //= value as number  // || DEFAULT_TARGET_POSITION;
+  private targetPosition; // || DEFAULT_TARGET_POSITION;
 
   private positionState: number = PositionState.STOPPED;
 
