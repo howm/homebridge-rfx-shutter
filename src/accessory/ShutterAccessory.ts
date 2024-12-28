@@ -24,6 +24,7 @@ enum PositionState {
 }
 
 type Required<T> = { [K in keyof T]-?: T[K] };
+const cache: { [key: string]: any } = {};
 
 export interface ShutterAccessoryConfig {
   openSeconds?: number;
