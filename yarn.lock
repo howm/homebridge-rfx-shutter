@@ -1664,7 +1664,7 @@ hexy@^0.3.5:
   resolved "https://registry.yarnpkg.com/hexy/-/hexy-0.3.5.tgz#adcd5ee47d66aca3581d771743a509a5176e45f9"
   integrity sha512-UCP7TIZPXz5kxYJnNOym+9xaenxCLor/JyhKieo8y8/bJWunGh9xbhy3YrgYJUQ87WwfXGm05X330DszOfINZw==
 
-homebridge@^1.9.0:
+homebridge@^1.9.0, homebridge@^2.0.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/homebridge/-/homebridge-1.9.0.tgz#5d41f4b56949837ead725f6f0334731e51a03d9d"
   integrity sha512-h8E/6VODsl8M0pDwf/Lu58iI6WzfAMbcOneISGpKS16jf2Sl7yP4c6pfFNPYY/fxwkWuHUlb5mUaZy4xEvb7LQ==
